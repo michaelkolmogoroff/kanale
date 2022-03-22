@@ -4,12 +4,33 @@
             background-image: url(kanale_background.jpg);
             background-attachment: fixed;
             margin: 0px;
-            }
-        header {
-            /*background-color: rgb(255, 255, 255);*/
             padding: 0px;
-            margin: 0px;
-            
+            }
+        a {
+            color: black;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+        a:hover {
+            background: rgba(0, 0, 0, 0.178);    
+        }
+        #logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        header {            
+            box-sizing: border-box;
+            height: 203px;
+            padding: 1rem;
+            padding-right: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-image: url(kanale_background.jpg);
+        }
+        nav {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
         }
         h1 {
             font-family: Arial, Helvetica, sans-serif;
@@ -25,55 +46,8 @@
             text-indent: 20px;
             font-size: 18px;
         }
-        nav {
-            text-align: center;
-            text-decoration: none;
-            color: white;
-        }
-        
-        span#nav {               
-            background-color: rgba(9, 49, 91, 0.541);
-            margin: 5px;
-            padding: 10px;
-            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
-            border-radius: 5px;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-weight: normal;
-            font-size: normal;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;            
-        }
-        a:visited {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            color: rgb(9, 48, 91);
-            text-decoration: none;
-        }
-        
-        a:active {
-            color: rgb(0, 0, 0);
-        }
-        a::after {            
-            text-decoration: none;
-            font-weight: normal;
-            color: darkgray;
-        }
-        
-        nav > a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            margin-right: 30px;
-            margin-left: 10px;
-            
-        }
-        nav > a:hover {
-            text-decoration: underline;
+        p#mk {
+            font-size: 13px;
         }
         main {
             text-align: center;
@@ -111,6 +85,83 @@
         }
         img#redessociais {
             max-width: 50px;
+        }
+        #menu {
+            display: flex;
+            list-style: none;
+            gap: .5rem;    
+        }
+        
+        #menu a{
+            display: block;
+            padding: .5rem;
+        }
+        
+        #btn-mobile{
+            display: none;
+        }
+        
+        @media (max-width: 650px) {
+            
+            #menu {
+                display: block;
+                position: absolute;
+                width: 40%;
+                top: 100px;
+                left: 0px;
+                background: #e7e7e7c2;
+                height: 0px;        
+                transition: .6s;
+                z-index: 1000;
+                visibility: hidden;
+                overflow-y: hidden;
+            }
+            #nav.active #menu {
+                height: calc(100vh - 70px);        
+                visibility: visible;
+                overflow-y: auto;
+            }
+        
+            #menu a {
+                padding: 1rem 0;
+                margin: 0 1rem;
+                border-bottom: 2px solid rgba(0, 0, 0, .05);
+            }
+            #btn-mobile {
+                display: flex;
+                padding: .5rem 1rem;
+                font-size: 1rem;
+                border: none;
+                background: none;
+                cursor: pointer;
+                gap: .5rem;
+            }
+            #hamburguer {
+                color: black;
+                border-top: 2px solid;
+                width: 20px;
+            }
+            #hamburguer::after, #hamburguer::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: currentColor;
+                margin-top: 5px;
+                transition: .3s;
+                position: relative;
+            }
+            #nav.active #hamburguer {
+                border-top-color: transparent;
+            }
+            #nav.active #hamburguer::before {
+                transform: rotate(135deg);
+            }
+            #nav.active #hamburguer::after {
+                transform: rotate(-135deg);
+                top: -7px;
+            }
+        
         }
 
   

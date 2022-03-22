@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grouping Tags</title>
+    <link rel="shortcut icon" href="kanale_favicon.ico" type="image/x-icon">
+    <title>Kanale</title>
     <link rel="stylesheet" href="kanale.css">    
 </head>
 <body>
-    <header>
-        <h1 id="logo">
-            <picture>
-                <source media="(max-width: 750px)" srcset="kanale_logo_gimp2p.png" type="image/png">
-                <img id="capa" src="kanale_logo_gimp2.png" alt="kanale_logo">
-            </picture>
-            
-        </h1>
-        <nav>
-            <span id="nav"><a href="index.html">Início</a></span>            
-            <span id="nav"><a href="sobrenos.html">Sobre Nós</a></span>
-            <span id="nav"><a href="vagas.html">Vagas</a></span>
-            <span id="nav"><a href="contato.html">Contato</a></span>
-            
-        </nav>
-    </header>
+    <header id="header">
+        <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburguer"></span>Menu
+        </button>
+        <ul id="menu" role="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobrenos.html">Sobre Nós</a></li>
+            <li><a href="vagas.html">Vagas</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <a href="index.html"><picture>
+        <source media="(max-width: 750px)" srcset="kanale_logo_gimp2p.png" type="image/png">
+        <img id="capa" src="kanale_logo_gimp2.png" alt="kanale_logo">                
+    </picture></a>
+</header>
     <main>
         <section>
             <table>
@@ -81,8 +83,12 @@
     </main>
         <table>
             <tr>              
-                <footer><p>Desenvolvido por MK</p></footer>
-            </tr>
-        </table>    
-    </body>
-</html>
+ 
+                <footer>
+                    <p id="mk">Desenvolvido por MK</p>
+                </footer>
+            
+                <script src="kanale.js"></script>
+                
+            </body>
+            </html>
